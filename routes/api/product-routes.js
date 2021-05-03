@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
-const sequelize = require("../../config/connection");
 
 // The `/api/products` endpoint
 
@@ -13,11 +12,11 @@ router.get("/", (req, res) => {
     include: [
       {
         model: Category,
-        attributes: ["category_name"],
+        attributes: ["id", "category_name"],
       },
       {
         model: Tag,
-        attributes: ["tag_name"],
+        attributes: ["id", "tag_name"],
         through: ProductTag,
         as: "tagged_product",
       },
@@ -46,7 +45,7 @@ router.get("/:id", (req, res) => {
       },
       {
         model: Tag,
-        attributes: ["tag_name"],
+        attributes: ["id", "tag_name"],
         through: ProductTag,
         as: "tagged_product",
       },
@@ -54,7 +53,7 @@ router.get("/:id", (req, res) => {
   })
     .then((dbProductData) => {
       if (!dbProductData) {
-        res.status(404).json({ message: "No product with this id" });
+        res.status(404).json({ message: "No product found with this id." });
         return;
       }
       res.json(dbProductData);
@@ -132,9 +131,11 @@ router.put("/:id", (req, res) => {
         ProductTag.bulkCreate(newProductTags),
       ]);
     })
-    .then((updatedProductTags) => res.json(updatedProductTags))
+    .then((updatedProductTags) => {
+      res.json(updatedProductTags);
+    })
     .catch((err) => {
-      // console.log(err);
+      console.log(err);
       res.status(400).json(err);
     });
 });
@@ -148,7 +149,7 @@ router.delete("/:id", (req, res) => {
   })
     .then((dbProductData) => {
       if (!dbProductData) {
-        res.status(404).json({ message: "No product found with this id" });
+        res.status(404).json({ message: "No product found with this id." });
         return;
       }
       res.json(dbProductData);
