@@ -20,9 +20,11 @@ To install this application you would need to clone the repository from the foll
 
 Open the command line in the directory of the application. Run "-npm i sequelize mysql dotenv". This will install the dependencies needed to run this application. You can use the dotenv pakage to use environment variables to store sensitive data, like your MySQL username, password, and database name. Create a new file in the root directory, name it ".env". Add the following to the file and save:
 
-DB*NAME='ecommerce_db'
-DB_USER='\_Your MySQL username*'
-DB*PW='\_Your MySQL password*'
+```
+DB_NAME='ecommerce_db'
+DB_USER=*Your MySQL username*
+DB_PW=*Your MySQL password*
+```
 
 After this is completed you will need to create the database. You can achieve this by running the following code in the command line to open MySQL shell.
 `mysql -u root -p` You will be prompted to enter your MySQL password. Next run `source db/schema.sql`. Verify database was created by running `SHOW DATABASES`. After verified quit MySQL shell. Next you will need to seed the database. In the command line run the code `npm run seed`. To start the server run `npm start`.
