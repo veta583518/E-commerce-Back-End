@@ -4,18 +4,32 @@
 
 This is the backend to an Express.js application that uses Sequelize to interact with a MySQL database. This is used as an E-commerce site would to display and update inventory, for their patrons online.
 
+---
+
 ## Table of Contents
 
-- [Installation](Installation)
-- [Usage](usage)
-- [Contributors](Contributors)
-- [Questions](Questions)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [Questions](#questions)
+
+---
+
+## Demo
+
+[Demo]()
+![Screenshot]()
+
+## [Back to Contents](#table-of-contents)
 
 ## Installation
 
 To install this application you would need to clone the repository from the following link [E-commerce](https://github.com/veta583518/E-commerce-Back-End). Next you will need to install the dependencies to run this application. - Sequelize, MySQL, and dotenv. You can do so with the following code in the root directory of where you cloned the repository. `npm install`.
 
 [Back to Contents](#table-of-contents)
+
+---
 
 ## Usage
 
@@ -32,11 +46,15 @@ After this is completed you will need to create the database. You can achieve th
 
 [Back to Contents](#table-of-contents)
 
+---
+
 ## Contributors
 
 [Veronica Williams- veta583518](https://github.com/veta583518)
 
 [Back to Contents](#table-of-contents)
+
+---
 
 ## Questions
 
