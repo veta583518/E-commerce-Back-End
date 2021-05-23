@@ -18,10 +18,13 @@ This is the backend to an Express.js application that uses Sequelize to interact
 
 ## Demo
 
-[Demo]()
-![Screenshot]()
+[Demo](https://github.com/veta583518/E-commerce-Back-End/blob/develop/assets/Untitled_%20May%2023%2C%202021%202_43%20AM.webm)
 
-## [Back to Contents](#table-of-contents)
+![Screenshot](https://github.com/veta583518/E-commerce-Back-End/blob/develop/assets/Screenshot.PNG)
+
+[Back to Contents](#table-of-contents)
+
+---
 
 ## Installation
 
